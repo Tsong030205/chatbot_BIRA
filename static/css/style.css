@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f7;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #10b981 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+}
+
+.ball-shadow {
+    box-shadow: 0 10px 30px -5px rgba(16, 185, 129, 0.2);
+}
+
+.nav-link:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #10b981 0%, #06b6d4 100%);
+    transition: width .3s;
+}
+
+.nav-link:hover:after, .nav-link:focus:after {
+    width: 100%;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}

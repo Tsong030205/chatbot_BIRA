@@ -1,0 +1,421 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BIRA - Accueil{% endblock %}
+{% block content %}
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+        <div class="gradient-bg absolute top-0 left-0 w-full h-full opacity-10"></div>
+        <div class="container mx-auto px-4 py-24 md:py-32 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                        <span class="gradient-text">L'excellence du ballon sportif</span>
+                    </h1>
+                    <p class="text-lg text-gray-700 mb-8 max-w-lg">
+                        BIRA fabrique des ballons de sport haut de gamme qui allient performance, durabilité et innovation pour satisfaire les athlètes amateurs et professionnels.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="{% url 'products' %}" class="gradient-bg text-white px-8 py-3 rounded-full font-medium text-center hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white">
+                            Découvrir nos produits
+                        </a>
+                        <a href="{% url 'custom' %}" class="border-2 border-emerald-500 text-emerald-500 px-8 py-3 rounded-full font-medium text-center hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                            Personnaliser un ballon
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="ball-shadow bg-white p-8 rounded-full">
+                        <img src="{% static 'images/hero-ball.webp' %}" alt="Collection de ballons de sport BIRA" class="w-full h-auto rounded-full animate-float" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counters Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text mb-2">250+</div>
+                    <div class="text-gray-700">Modèles de ballons</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text mb-2">15+</div>
+                    <div class="text-gray-700">Sports couverts</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text mb-2">5</div>
+                    <div class="text-gray-700">Pays desservis</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold gradient-text mb-2">10K</div>
+                    <div class="text-gray-700">Ballons recyclés</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Nos Ballons</h2>
+                <p class="text-gray-700 max-w-2xl mx-auto">
+                    Découvrez notre gamme de ballons certifiés répondant aux standards internationaux pour une performance optimale sur le terrain.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="{% static 'images/football.webp' %}" alt="Ballon de football FIFA Pro" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <div class="gradient-text font-bold mb-2">Football Pro +</div>
+                        <h3 class="text-xl font-bold mb-2">Ballon de Football FIFA Pro</h3>
+                        <p class="text-gray-700 mb-4">Certifié FIFA Quality Pro pour une performance professionnelle avec une surface thermosoudée pour un toucher optimal.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">50000 MGA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="{% static 'images/basketball.webp' %}" alt="Ballon de basketball FIBA Eco" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <div class="gradient-text font-bold mb-2">Basket Eco</div>
+                        <h3 class="text-xl font-bold mb-2">Ballon de Basketball FIBA</h3>
+                        <p class="text-gray-700 mb-4">Ballon officiel FIBA fabriqué à partir de matériaux recyclés. Excellente prise en main et rebond constant.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">55000 MGA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="{% static 'images/volleyball.webp' %}" alt="Ballon de volleyball FIVB Elite" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <div class="gradient-text font-bold mb-2">Volley Elite</div>
+                        <h3 class="text-xl font-bold mb-2">Ballon de Volleyball FIVB</h3>
+                        <p class="text-gray-700 mb-4">Design révolutionnaire avec micro-texture pour un meilleur contrôle. Approuvé par la Fédération Internationale de Volleyball.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">45000 MGA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="{% url 'products' %}" class="inline-flex items-center gradient-text font-medium text-lg hover:underline focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    Voir tous nos produits
+                    <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-4xl font-bold mb-6">Personnalisation <span class="gradient-text">de ballons</span></h2>
+                    <p class="text-gray-700 mb-6">
+                        Créez votre ballon unique avec le logo, les couleurs et le design de votre choix. Idéal pour les clubs, écoles, entreprises et événements.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-500 mt-1 mr-3"></i>
+                            <span class="text-gray-800">Technologie d'impression haute résolution durable</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-500 mt-1 mr-3"></i>
+                            <span class="text-gray-800">Choix parmi nos modèles standards ou création sur-mesure</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-500 mt-1 mr-3"></i>
+                            <span class="text-gray-800">Quantités à partir de 10 unités</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-500 mt-1 mr-3"></i>
+                            <span class="text-gray-800">Livraison sous 2 à 3 semaines</span>
+                        </li>
+                    </ul>
+                    <a href="{% url 'custom' %}" class="gradient-bg text-white px-8 py-3 rounded-full font-medium inline-block hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white">
+                        Demander un devis
+                    </a>
+                </div>
+                <div class="order-1 lg:order-2 relative">
+                    <div class="ball-shadow bg-gray-50 p-8 rounded-full">
+                        <img src="{% static 'images/custom-ball.webp' %}" alt="Ballon personnalisé pour Club Olympique" class="w-full h-auto rounded-full" loading="lazy">
+                    </div>
+                    <div class="absolute -bottom-8 -right-8 bg-white p-4 rounded-xl shadow-lg hidden lg:block">
+                        <div class="text-sm mb-2">Exemple de création personnalisée</div>
+                        <div class="text-xl font-bold gradient-text">Club Olympique</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Nos Services</h2>
+                <p class="text-gray-700 max-w-2xl mx-auto">
+                    BIRA offre une gamme complète de services pour satisfaire tous les besoins liés aux ballons sportifs.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white mb-4">
+                        <i class="fa-solid fa-wrench text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Réparation de ballons</h3>
+                    <p class="text-gray-700">Redonnez une seconde vie à vos ballons préférés avec notre service de réparation expert.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white mb-4">
+                        <i class="fa-solid fa-recycle text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Recyclage responsable</h3>
+                    <p class="text-gray-700">Programme de collecte et recyclage des ballons usagés pour préserver l'environnement.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white mb-4">
+                        <i class="fa-solid fa-trophy text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Événements sportifs</h3>
+                    <p class="text-gray-700">Organisation de tournois et compétitions avec notre expertise et notre matériel.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white mb-4">
+                        <i class="fa-solid fa-graduation-cap text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Formation & coaching</h3>
+                    <p class="text-gray-700">Programmes de formation pour jeunes sportifs avec notre matériel pédagogique.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+                <div class="lg:col-span-2">
+                    <h2 class="text-4xl font-bold mb-6">Nos Valeurs</h2>
+                    <p class="text-gray-700 mb-6">
+                        Depuis notre création, BIRA s'engage à respecter des principes forts qui guident chacune de nos actions et innovations.
+                    </p>
+                    <img src="{% static 'images/values.webp' %}" alt="Équipe BIRA en action lors d'un tournoi communautaire" class="rounded-xl shadow-lg w-full" loading="lazy">
+                </div>
+                <div class="lg:col-span-3">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white mb-4">
+                                <i class="fa-solid fa-medal"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Qualité</h3>
+                            <p class="text-gray-700">Nos ballons répondent aux certifications internationales les plus exigeantes (FIFA, FIBA, FIVB, etc.).</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white mb-4">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Durabilité</h3>
+                            <p class="text-gray-700">Utilisation de matériaux recyclés et éco-responsables dans nos processus de fabrication.</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white mb-4">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Innovation</h3>
+                            <p class="text-gray-700">Recherche constante d'améliorations technologiques pour des ballons toujours plus performants.</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white mb-4">
+                                <i class="fa-solid fa-globe-africa"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Engagement social</h3>
+                            <p class="text-gray-700">Soutien aux écoles et clubs locaux à travers des dons de ballons et des programmes de formation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gradient-to-r from-emerald-50 to-cyan-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Témoignages</h2>
+                <p class="text-gray-700 max-w-2xl mx-auto">
+                    Ce que disent nos clients et partenaires à propos de BIRA.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="{% static 'images/testimonial-1.webp' %}" alt="Portrait de Jean Dupont" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Jean Dupont</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Les ballons BIRA sont d'une qualité exceptionnelle. Nous avons équipé tout notre club de football avec leur gamme Pro et les retours des joueurs sont unanimes : meilleur toucher et durabilité incomparable."
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="{% static 'images/testimonial-2.webp' %}" alt="Portrait de Sophie Martin" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sophie Martin</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "Nous avons commandé des ballons personnalisés pour notre entreprise et le résultat était parfait. Excellente qualité d'impression et délai respecté. Nos clients ont beaucoup apprécié ce cadeau original."
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="{% static 'images/testimonial-3.webp' %}" alt="Portrait de Paul Koffi" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Paul Koffi</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "En tant qu'entraîneur de basket, j'apprécie particulièrement la gamme Eco de BIRA. Des ballons performants fabriqués à partir de matériaux recyclés - parfait pour notre engagement environnemental."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Nous <span class="gradient-text">contacter</span></h2>
+                    <p class="text-gray-700 mb-8 max-w-lg">
+                        Vous avez une question, besoin d'un devis ou souhaitez discuter d'un projet personnalisé ? Notre équipe est à votre écoute.
+                    </p>
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                <i class="fa-solid fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Adresse</h3>
+                                <p class="text-gray-700">ZA Ambodivoanjo, Antananarivo 101, Madagascar</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Email</h3>
+                                <p class="text-gray-700">contact@bira-entreprise.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                <i class="fa-solid fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Téléphone</h3>
+                                <p class="text-gray-700">+261 34 123 4567</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-emerald-100 hover:text-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-emerald-100 hover:text-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-emerald-100 hover:text-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-emerald-100 hover:text-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold mb-6">Envoyez-nous un message</h3>
+                    <form action="#contact" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Nom complet</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition" aria-required="true">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition" aria-required="true">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 mb-2">Sujet</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition" aria-required="true"></textarea>
+                        </div>
+                        <button type="submit" class="gradient-bg text-white px-6 py-3 rounded-lg font-medium w-full hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white">
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4">Abonnez-vous à notre newsletter</h2>
+                <p class="mb-6 opacity-90">Recevez les dernières nouveautés, offres spéciales et conseils pour vos équipements sportifs.</p>
+                <form action="#newsletter" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Votre email" class="flex-grow px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white" aria-label="Saisir votre email" aria-required="true">
+                    <button type="submit" class="bg-white text-emerald-600 font-medium px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        S'abonner
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

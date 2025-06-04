@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BIRA - Personnalisation{% endblock %}
+{% block content %}
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold mb-8 text-center">Personnalisation de Ballons</h1>
+            <p class="text-gray-700 mb-8 text-center max-w-2xl mx-auto">
+                Créez votre ballon unique avec le logo, les couleurs et le design de votre choix. Idéal pour les clubs, écoles, entreprises et événements.
+            </p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-500 mt-1 mr-3"></i>
+                            <span class="text-gray-800">Technologie d'impression haute résolution durable</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-500 mt-1 mr-3"></i>
+                            <span class="text-gray-800">Choix parmi nos modèles standards ou création sur-mesure</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-500 mt-1 mr-3"></i>
+                            <span class="text-gray-800">Quantités à partir de 10 unités</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-500 mt-1 mr-3"></i>
+                            <span class="text-gray-800">Livraison sous 2 à 3 semaines</span>
+                        </li>
+                    </ul>
+                    <a href="{% url 'contact' %}" class="gradient-bg text-white px-8 py-3 rounded-full font-medium inline-block hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white">
+                        Demander un devis
+                    </a>
+                </div>
+                <div class="relative">
+                    <div class="ball-shadow bg-gray-50 p-8 rounded-full">
+                        <img src="{% static 'images/custom-ball.webp' %}" alt="Ballon personnalisé pour Club Olympique" class="w-full h-auto rounded-full" loading="lazy">
+                    </div>
+                    <div class="absolute -bottom-8 -right-8 bg-white p-4 rounded-xl shadow-lg hidden lg:block">
+                        <div class="text-sm mb-2">Exemple de création personnalisée</div>
+                        <div class="text-xl font-bold gradient-text">Club Olympique</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
