@@ -14,7 +14,7 @@ Un chatbot intelligent pour BIRA Entreprise, spécialisé dans la vente de ballo
 
 1. Cloner le repository :
 ```bash
-git clone https://github.com/votre-username/chatbot_BIRA.git
+git clone https://github.com/Tsong030205/chatbot_BIRA.git
 cd chatbot_BIRA
 ```
 
